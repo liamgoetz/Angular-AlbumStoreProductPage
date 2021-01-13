@@ -12,6 +12,13 @@ export class ProductService {
   public set value(v : string) {
     this._albumUrl = v;
   }
+
+  /**
+   * getAlbum
+   */
+  public getAlbum(id : number) {
+    this._http.get(this._albumUrl);
+  }
   
 
 }

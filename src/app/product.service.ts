@@ -17,7 +17,7 @@ export class ProductService {
    * getAlbum
    */
   public getAlbum(id : number) {
-    this._http.get(this._albumUrl);
+    return this._http.get(this._albumUrl);
   }
   
 

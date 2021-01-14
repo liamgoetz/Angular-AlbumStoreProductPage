@@ -22,8 +22,8 @@ export class ProductService {
   /**
    * getProducts
    */
-  public getProducts() {
-    return this._http.get(this._productsUrl);
+  public getProducts() : Observable<Product[]> {
+    return this._http.get(this._productsUrl).map(response=> <Product[]> response.json());
   }
 
   /**

@@ -3,6 +3,7 @@ import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Album } from './album';
 import { Observable } from 'rxjs/Observable';
+import { Product } from './product';
 
 @Injectable()
 export class ProductService {
@@ -14,6 +15,15 @@ export class ProductService {
   }
   public set value(v : string) {
     this._albumUrl = v;
+  }
+
+  private _productsUrl : string = '../assets/products.json';
+
+  /**
+   * getProducts
+   */
+  public getProducts() {
+    return this._http.get(this._productsUrl);
   }
 
   /**

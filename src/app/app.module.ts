@@ -11,6 +11,10 @@ import { ProductService } from './product.service';
 import { ProductTracklistingComponent } from './product-tracklisting/product-tracklisting.component';
 import { ProductListComponent } from './product-list/product-list.component';
 
+import { Routes, RouterModule } from '@angular/router';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
